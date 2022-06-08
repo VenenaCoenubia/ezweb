@@ -42,7 +42,7 @@ app.delete('/removeData', (request, response) => {
         return response.status(400).send("error data not enough");
     }
     for (let i = 0; i < ex.length; i++) {
-        if (ex[i].id == request.body.name_first) {
+        if (ex[i].name_first == request.body.name_first) {
             ex.splice(i, 1);
             return response.send("ok");
         }
